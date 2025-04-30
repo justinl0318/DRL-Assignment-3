@@ -28,6 +28,11 @@ jobs:
         pip install gym
         pip install -r requirements.txt
 
+    - name: 3. Download model weight
+      run: |
+        mkdir -p models
+        gdown "https://drive.google.com/uc?id=1W4RCVUxs9jP13xyTSgZpxcMJGTE5auDW" -O ./models/mario_dqn_ep8500.pth
+
     - name: 3. Ensure env.so is executable
       run: chmod +x eval.cpython-38-x86_64-linux-gnu.so
 
