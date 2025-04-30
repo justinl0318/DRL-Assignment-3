@@ -13,3 +13,4 @@ tqdm
 tensordict
 nes-py
 ipdb
+gdown
