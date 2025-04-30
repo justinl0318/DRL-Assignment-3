@@ -8,7 +8,6 @@ from model import DuelingDQN
 import random
 
 ### NOTE:
-# current best score is set_seed(666) at __init__, first 4 frames are random action, model weight: mario_dqn_ep3600.pth (old, in data1/b10902078)
 
 class Agent(object):
     """Mario-playing agent using a pretrained Dueling DQN with frame skipping."""
@@ -37,7 +36,7 @@ class Agent(object):
         # self.epsilon = 0.001
         self.epsilon = 0.0
         
-        # self.set_seed(666)
+        self.set_seed(666)
         
     def set_seed(self, seed: int):
         random.seed(seed)
